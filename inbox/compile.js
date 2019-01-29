@@ -11,4 +11,4 @@ const inboxPath = path.resolve(__dirname,'contracts','Inbox.sol');
 //Read in the contents of the file. The raw source code.
 const source = fs.readFileSync(inboxPath,'utf8');
 
-console.log(solc.compile(source,1));
+solc.compile(source,1);
