@@ -11,4 +11,6 @@ const inboxPath = path.resolve(__dirname,'contracts','Inbox.sol');
 //Read in the contents of the file. The raw source code.
 const source = fs.readFileSync(inboxPath,'utf8');
 
-solc.compile(source,1);
+//This will export the compiled file. Make it available
+//At the moment only interested in the Inbox contract.
+module.exports = solc.compile(source,1).contracts[':Inbox'];
