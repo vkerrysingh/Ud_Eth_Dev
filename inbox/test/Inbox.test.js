@@ -8,34 +8,16 @@ const Web3 = require('web3');
 //must specify a provider for web3 to connect to ganache
 const web3 = new Web3(ganache.provider());
 
-
-
-class Car{
-
-  park(){
-    return 'stopped';
-  }
-
-  drive(){
-    return 'vroom';
-  }
-}
-
-//Initialise car to undefined.
-//Makes it available throughout the tests.
-let car;
-
-beforeEach(() => {
-  //console.log('a');
-  car = new Car();
-});
-
-describe('Car', ()=>{
-  it('can park', ()=>{
-    assert.equal(car.park(),'stopped');
+beforeEach(()=>{
+  //Get a list of all accounts
+  web3.eth.getAccounts()
+  .then(fetchedAccounts => {
+    console.log(fetchedAccounts);
   });
 
-  it('can drive', () =>{
-    assert.equal(car.drive(),'vroom');
-  });
+  //Use one of those accounts to deploy the contract
 });
+
+describe('Inbox', ()=> {
+  it('deploys a contract',() => {});
+})
