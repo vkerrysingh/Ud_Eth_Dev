@@ -25,9 +25,18 @@ beforeEach(async ()=>{
     .send({ from:accounts[0], gas:'1000000' })
 });
 
+/*
 describe('Inbox', () => {
   it('deploys a contract',() => {
     //console.log(accounts);
     console.log(inbox);
+  });
+})
+*/
+
+describe('Inbox', () => {
+  it('deploys a contract',() => {
+    //ok method checks if a value exists. i.e is address a defined value
+    assert.ok(inbox.options.address);
   });
 })
