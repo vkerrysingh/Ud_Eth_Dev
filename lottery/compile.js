@@ -6,11 +6,11 @@ const solc = require('solc');
 
 //__dirname will get the inbox dir path.
 //look in the contracts folder and get a path to the Inbox.sol file.
-const inboxPath = path.resolve(__dirname,'contracts','Inbox.sol');
+const lotteryPath = path.resolve(__dirname,'contracts','Lottery.sol');
 
 //Read in the contents of the file. The raw source code.
-const source = fs.readFileSync(inboxPath,'utf8');
+const source = fs.readFileSync(lotteryPath,'utf8');
 
 //This will export the compiled file. Make it available
 //At the moment only interested in the Inbox contract.
-module.exports = solc.compile(source,1).contracts[':Inbox'];
+module.exports = solc.compile(source,1).contracts[':Lottery'];
