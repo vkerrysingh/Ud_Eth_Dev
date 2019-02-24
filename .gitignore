@@ -1,2 +1,4 @@
 inbox/deploy.js
 lottery/deploy.js
+inbox/node_modules/
+lottery/node_modules/
