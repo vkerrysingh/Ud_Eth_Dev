@@ -2,3 +2,9 @@ inbox/deploy.js
 lottery/deploy.js
 inbox/node_modules/
 lottery/node_modules/
+
+ReduxSimpleStarter/node_modules
+ReduxSimpleStarter/bundle.js
+ReduxSimpleStarter/npm-debug.log
+ReduxSimpleStarter/.DS_Store
+ReduxSimpleStarter/package-lock.json
